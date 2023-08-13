@@ -11,5 +11,10 @@ namespace CodingWiki_DataAccess
     public class ApplicationDbContext : DbContext
     {
         public DbSet<Book> Books { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=DESKTOP-O7C3GCO\\SQLEXPRESS;Database=CodingWiki;TrustServerCertificate=True;Trusted_Connection=True;");
+        }
     }
 }
