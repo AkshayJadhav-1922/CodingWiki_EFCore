@@ -16,5 +16,10 @@ namespace CodingWiki_DataAccess
         {
             optionsBuilder.UseSqlServer("Server=DESKTOP-O7C3GCO\\SQLEXPRESS;Database=CodingWiki;TrustServerCertificate=True;Trusted_Connection=True;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Book>().Property(u => u.Price).HasPrecision(10, 5);
+        }
     }
 }
