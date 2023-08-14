@@ -32,3 +32,6 @@ Lecture 24-
 	drop-database - to drop database
 	if we simply run command update-database => it will check if db is not in sync with the migrations available in folder. 
 	If so it will apply the migrations available in folder
+
+Lecture 25-
+	To seed data we can use HasData fluent api in onModelCreating method

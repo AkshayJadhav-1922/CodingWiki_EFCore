@@ -3,6 +3,7 @@ using CodingWiki_DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodingWiki_DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230814181401_UpdatedPriseDataType")]
+    partial class UpdatedPriseDataType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,43 +45,6 @@ namespace CodingWiki_DataAccess.Migrations
                     b.HasKey("BookId");
 
                     b.ToTable("Books");
-
-                    b.HasData(
-                        new
-                        {
-                            BookId = 1,
-                            ISBN = "123B12",
-                            Price = 10.99m,
-                            Title = "Spider without duty"
-                        },
-                        new
-                        {
-                            BookId = 2,
-                            ISBN = "12123B12",
-                            Price = 11.99m,
-                            Title = "Fortune of time"
-                        },
-                        new
-                        {
-                            BookId = 3,
-                            ISBN = "77652",
-                            Price = 20.99m,
-                            Title = "Fake Sunday"
-                        },
-                        new
-                        {
-                            BookId = 4,
-                            ISBN = "CC12B12",
-                            Price = 25.99m,
-                            Title = "Cookie Jar"
-                        },
-                        new
-                        {
-                            BookId = 5,
-                            ISBN = "90392B33",
-                            Price = 40.99m,
-                            Title = "Cloudy Forest"
-                        });
                 });
 
             modelBuilder.Entity("CodingWiki_Model.Models.Genre", b =>
