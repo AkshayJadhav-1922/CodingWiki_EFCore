@@ -1,0 +1,23 @@
+﻿Till Now we have learned - 
+
+Packages Required For Entity Framework-
+1)EntityFrameworkCore
+2)EntityFrameworkCore.sqlServer
+3)EntityFrameworkCore.Design
+4)EntityFrameworkCore.tools
+
+Separating projects for model and data access.
+
+what is Db Context?
+How to add Db Context?
+How to add connection string?
+How to configure connection in ApplicationDbContext - OnConfiguring method?
+How to add migrartions?
+How to update database?
+When to add migrations?
+How we can remove migrations?
+How and When to jump to old migration?
+How to add model and then dbset?
+
+
+
