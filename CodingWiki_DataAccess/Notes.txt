@@ -36,7 +36,10 @@ Lecture 24-
 Lecture 25-
 	To seed data we can use HasData fluent api in onModelCreating method
 
-Lecture 26-
+Lecture 26,27-
 	Data Annotatins 
 	Table["tableName"] - We can apply on model class name
 	Column["columnName"] - Can apply on top of property/column 
+	[Key] - Can be applied to make column as primary key
+	[Required] - Makes nullable false for column on which it is applied
+
