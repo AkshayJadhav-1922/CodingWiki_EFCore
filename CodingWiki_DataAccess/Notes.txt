@@ -18,6 +18,17 @@ When to add migrations?
 How we can remove migrations?
 How and When to jump to old migration?
 How to add model and then dbset?
+How to fluent API's in onmodelcreating method?
+
+Lecture 23-
+	How to revert to previous migrations? 
+	=> use command update-database then migration name to which we need to revert.
+	eg if a and b are two migration and if we want to undo b, then we can use update-database a
+	How to execute sql in migration methods?
 
 
-
+Lecture 24-
+	get-migration - to view all the migrations
+	drop-database - to drop database
+	if we simply run command update-database => it will check if db is not in sync with the migrations available in folder. 
+	If so it will apply the migrations available in folder
